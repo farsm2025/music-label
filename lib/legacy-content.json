@@ -1,0 +1,280 @@
+{
+  "studio": [
+    {
+      "tag": "h3",
+      "text": "In the Studio"
+    },
+    {
+      "tag": "h4",
+      "text": "May 3rd, 2018"
+    },
+    {
+      "tag": "p",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut feugiat nunc. Nulla euismod ut mi sit amet sagittis. Suspendisse rutrum arcu eu velit pulvinar, in iaculis felis condimentum. Pellentesque at metus quam. Morbi sollicitudin metus arcu, vel eleifend eros faucibus nec."
+    },
+    {
+      "tag": "p",
+      "text": "Maecenas dignissim et nulla nec eleifend. Sed leo mi, ornare at augue vel, posuere vulputate justo. Suspendisse aliquam, ex ullamcorper tristique malesuada, ex neque ornare tortor, non maximus ante lorem a augue. Aliquam porttitor egestas elit, ut sagittis urna maximus quis. Phasellus pulvinar libero quis velit congue imperdiet. In hac habitasse platea dictumst."
+    },
+    {
+      "tag": "p",
+      "text": "Mauris tristique risus arcu, sit amet suscipit tellus posuere id. Nullam scelerisque ipsum ut felis tristique, non eleifend tortor accumsan."
+    }
+  ],
+  "tour": [
+    {
+      "tag": "h3",
+      "text": "Tour Dates Announced"
+    },
+    {
+      "tag": "h4",
+      "text": "June 21st, 2018"
+    },
+    {
+      "tag": "p",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut feugiat nunc. Nulla euismod ut mi sit amet sagittis. Suspendisse rutrum arcu eu velit pulvinar, in iaculis felis condimentum. Pellentesque at metus quam. Morbi sollicitudin metus arcu, vel eleifend eros faucibus nec."
+    },
+    {
+      "tag": "p",
+      "text": "Maecenas dignissim et nulla nec eleifend. Sed leo mi, ornare at augue vel, posuere vulputate justo. Suspendisse aliquam, ex ullamcorper tristique malesuada, ex neque ornare tortor, non maximus ante lorem a augue. Aliquam porttitor egestas elit, ut sagittis urna maximus quis. Phasellus pulvinar libero quis velit congue imperdiet. In hac habitasse platea dictumst."
+    },
+    {
+      "tag": "p",
+      "text": "Mauris tristique risus arcu, sit amet suscipit tellus posuere id. Nullam scelerisque ipsum ut felis tristique, non eleifend tortor accumsan."
+    }
+  ],
+  "video": [
+    {
+      "tag": "h3",
+      "text": "New Music Video"
+    },
+    {
+      "tag": "h4",
+      "text": "June 28th, 2018"
+    },
+    {
+      "tag": "p",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut feugiat nunc. Nulla euismod ut mi sit amet sagittis. Suspendisse rutrum arcu eu velit pulvinar, in iaculis felis condimentum. Pellentesque at metus quam. Morbi sollicitudin metus arcu, vel eleifend eros faucibus nec."
+    },
+    {
+      "tag": "p",
+      "text": "Maecenas dignissim et nulla nec eleifend. Sed leo mi, ornare at augue vel, posuere vulputate justo. Suspendisse aliquam, ex ullamcorper tristique malesuada, ex neque ornare tortor, non maximus ante lorem a augue. Aliquam porttitor egestas elit, ut sagittis urna maximus quis. Phasellus pulvinar libero quis velit congue imperdiet. In hac habitasse platea dictumst."
+    },
+    {
+      "tag": "p",
+      "text": "Mauris tristique risus arcu, sit amet suscipit tellus posuere id. Nullam scelerisque ipsum ut felis tristique, non eleifend tortor accumsan."
+    }
+  ],
+  "credits": [
+    {
+      "tag": "h3",
+      "text": "Website Development"
+    },
+    {
+      "tag": "h4",
+      "text": "Matthew Waldron"
+    },
+    {
+      "tag": "h6",
+      "text": "waldronmatthew.com"
+    },
+    {
+      "tag": "p",
+      "text": "This website is developed by Matthew Waldron. The code of this website is under the MIT license. If you decide to use the website as your own, you may do so providing:"
+    },
+    {
+      "tag": "p",
+      "text": "►You keep the footer link \"Website Credits\" in any and all pages of this website."
+    },
+    {
+      "tag": "p",
+      "text": "►You retain the text of this page to properly credit Matthew Waldron and the developers credited below."
+    },
+    {
+      "tag": "p",
+      "text": "►You acknoledge and agree to the Website's Terms of Use."
+    },
+    {
+      "tag": "h3",
+      "text": "Navigation"
+    },
+    {
+      "tag": "h4",
+      "text": "Andor Nagy"
+    },
+    {
+      "tag": "p",
+      "text": "Codepen by Andor Nagy that allows for navigation between web pages. Parts of CSS used. Codepen under the MIT license."
+    },
+    {
+      "tag": "h3",
+      "text": "Menu Scroll Highlighting"
+    },
+    {
+      "tag": "h4",
+      "text": "Joxmar"
+    },
+    {
+      "tag": "p",
+      "text": "Codepen by Joxmar that allows for naviagation highlighting for index.html id tags on scroll. Javascript used from Codepen. Codepen under the MIT license."
+    },
+    {
+      "tag": "h3",
+      "text": "Sticky Navigation"
+    },
+    {
+      "tag": "h4",
+      "text": "Guil H"
+    },
+    {
+      "tag": "p",
+      "text": "Codepen by Guil H that allows the naviagation bar to stick to the top while hiding title on scroll. Parts of CSS and Javascript used from Codepen. Coden under the MIT license."
+    },
+    {
+      "tag": "h3",
+      "text": "Smooth Scroll"
+    },
+    {
+      "tag": "h4",
+      "text": "Chris Coyier"
+    },
+    {
+      "tag": "p",
+      "text": "Codepen by Chris Coyier that allows for smooth scrolling of internal links when clicked. Parts of Javascript used from Codepen. Coden under the MIT license."
+    },
+    {
+      "tag": "h3",
+      "text": "Video Thumbnails"
+    },
+    {
+      "tag": "h4",
+      "text": "Amit Agarwal"
+    },
+    {
+      "tag": "p",
+      "text": "Code by Amit Agarwal that embedds YouTube videos by using the video thumbnail. The player loads when the user clicks the play button. This approach decreases page load time. Javascript, CSS, and parts of HTML used from source code."
+    },
+    {
+      "tag": "h3",
+      "text": "HTML5 Audio Player"
+    },
+    {
+      "tag": "h4",
+      "text": "Alex Katz"
+    },
+    {
+      "tag": "p",
+      "text": "Codepen by Alex Katz. This allows for multiple music players with start, stop, and timeline capabilities. Javascript and parts of CSS used. Modified to allow for music titles and responsive design. Codepen under the MIT license."
+    },
+    {
+      "tag": "h3",
+      "text": "Lightbox2"
+    },
+    {
+      "tag": "h4",
+      "text": "Lokesh Dhakar"
+    },
+    {
+      "tag": "p",
+      "text": "Lightbox photo viewer by Lokesh Dhakar. Allows for modal photo viewing when the picture thumbnail is clicked. Code under the MIT license."
+    },
+    {
+      "tag": "h3",
+      "text": "Responsive Tiles"
+    },
+    {
+      "tag": "h4",
+      "text": "Ronny Siikaluoma"
+    },
+    {
+      "tag": "p",
+      "text": "Codepen by Ronny Siikaluoma that allows for squares that resize according to screen size. Parts of HTML and CSS used. Updated for even tile size and picture replacement and dynamic resizing. Codepen under the MIT license."
+    },
+    {
+      "tag": "h3",
+      "text": "Mailing List"
+    },
+    {
+      "tag": "h4",
+      "text": "David McCoy"
+    },
+    {
+      "tag": "p",
+      "text": "Gist that allows posting from an HTML from to Google Sheets. Google Script and Javascript used."
+    },
+    {
+      "tag": "h3",
+      "text": "Modal Viewer for Mailing List"
+    },
+    {
+      "tag": "h4",
+      "text": "W3Schools Tutorials"
+    },
+    {
+      "tag": "p",
+      "text": "Tutorial that allows for a modal to display when clicked. Added functionality to clear contents after click. HTML, CSS, and Javascript used."
+    },
+    {
+      "tag": "h3",
+      "text": "HTML Form"
+    },
+    {
+      "tag": "h4",
+      "text": "www.freecontactform.com"
+    },
+    {
+      "tag": "p",
+      "text": "Basic html form with user input validation. HTML and PHP used."
+    },
+    {
+      "tag": "h3",
+      "text": "Photos"
+    },
+    {
+      "tag": "h4",
+      "text": "Unsplash"
+    },
+    {
+      "tag": "p",
+      "text": "Royalty free photos from unsplash.com except where noted. Images resized / compressed to increase load time."
+    },
+    {
+      "tag": "h3",
+      "text": "Social Media Icons"
+    },
+    {
+      "tag": "h4",
+      "text": "Iconfinder"
+    },
+    {
+      "tag": "p",
+      "text": "Royalty free social media icons from iconfinder.com. Colors edited to match the website theme."
+    },
+    {
+      "tag": "h3",
+      "text": "Github Contributors"
+    },
+    {
+      "tag": "p",
+      "text": "►Logo Design: Mirza Zulfan"
+    },
+    {
+      "tag": "p",
+      "text": "►Sticky Navigation Bug #1 Issue Fix: Abel Chen"
+    }
+  ],
+  "terms": [
+    {
+      "tag": "h3",
+      "text": "Terms of Use"
+    },
+    {
+      "tag": "h4",
+      "text": "Copyright © 2018 Your Name"
+    },
+    {
+      "tag": "p",
+      "text": "This website belongs to Your Name Copyright © 2018. All Rights Reserved. All information presented on the website is reserved with the exception of third-party logos, pictures, text and / or links that are subject to the copyright rights of their providers. Any duplication or use of objects such as images or texts in other electronic or printed publications is not permitted without Your Name's agreement."
+    }
+  ]
+}

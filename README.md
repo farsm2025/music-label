@@ -1,134 +1,71 @@
-<h1 align=center>
-<img src="Logotype 1024 .svg" width=80%>
-</h1>
+# Music Label
 
-Free website template built for musicians / artists to promote their music and connect with their audience. 
+Site musical migré vers **Next.js 16 (App Router) et React 19**, prêt à être déployé sur Vercel. Interface sombre et éditoriale, responsive, sans jQuery ni serveur PHP.
 
-## Features
+## Développement
 
-* Customizable hero images and responsive picture modal
-* Javascript based music player and YouTube thumbnail generator optimzed for page loading
-* Mailing list and contact form with validation and back-end integration
-* Additional sections inlcuding an about, merch, news press, and shows section
-* Project code meets HTML and CSS W3C validation compliance (excluding the black and white css skin)
+Node.js 20.9 ou supérieur (Node.js 24 recommandé), npm.
 
-## Getting Started
+```bash
+npm ci
+npm run dev
+```
 
-Note: It is recommended you use a local web server set up with php and a mail server for full testing functionality.
+Ouvrir `http://localhost:3000` sur la machine où le serveur tourne.
 
-To edit the header and nav:
-1) Replace with your artist / band name in id "logo"
-2) Update the nav links to your own
+```bash
+npm test        # validation et comportement de la route contact, fournisseur simulé
+npm run build  # build de production
+npm start      # exécution du build de production
+```
 
-To edit the home section:
+## Déploiement Vercel
 
-1) Substitute your picture name in class "hero" in style.css
-2) Edit your tagline, call-to-action (CTA), and CTA link in the class "home" in index.html
+1. Pousser cette migration dans votre dépôt GitHub.
+2. Importer le dépôt dans Vercel, avec **Next.js** comme framework et la racine du dépôt comme Root Directory.
+3. Choisir Node.js 24. Les commandes détectées sont `npm run build` et `npm ci`. Ne pas utiliser un export statique : `/api/contact` est une fonction serveur.
+4. Déployer. Vercel fournit une URL publique et des URLs de prévisualisation pour les changements suivants.
 
-To edit the mailing list:
+Aucun déploiement ni push n’est réalisé par ces instructions. Le site et le lecteur musical fonctionnent sans service externe ; l’envoi des formulaires demande la configuration ci-dessous.
 
-1) Create your own Google Sheets mailing list by following the tutorial by David McCoy: https://medium.com/@dmccoy/how-to-submit-an-html-form-to-google-sheets-without-google-forms-b833952cc175
-2) Replace your newly created google sheets link via "url" in mailingList.js
-3) Substitute your call-to-action and tagline in the index.html
+## Formulaires et e-mails
 
-To edit the about section: 
+Le formulaire PHP est remplacé par `POST /api/contact`, qui utilise l’API HTTPS de **Resend** côté serveur. Copier `.env.example` vers `.env.local` pour un développement local, ou configurer ces variables dans Vercel pour les environnements souhaités :
 
-1) Change the social media links to your own
-2) Edit class "About" in index.html 
+| Variable | Usage |
+| --- | --- |
+| `RESEND_API_KEY` | Clé privée Resend, uniquement côté serveur |
+| `CONTACT_FROM` | Expéditeur sur un domaine vérifié dans Resend, par exemple `Music Label <contact@votre-domaine.fr>` |
+| `CONTACT_TO` | Adresse qui reçoit les messages et les demandes d’inscription |
 
-To edit the merch section:
+Ne jamais utiliser de préfixe `NEXT_PUBLIC_` pour la clé, ni versionner les valeurs. Après un changement de variables dans Vercel, redéployer.
 
-1) Compress your pictures and reduce pixels to optimize load time
-2) Copy your pictures to dir /pictures/merch
-3) Substitute your picture name in classes ".a, .b, .c", ect... in style.css
-4) Substitute your picture name in class "grid" in index.html
+Sans ces variables, le serveur retourne **503** et l’interface indique que l’envoi n’est pas activé. Un fournisseur défaillant retourne **502**, sans fausse confirmation. Les tests simulent Resend : ils ne prouvent pas une livraison réelle. Après configuration, vérifier une livraison dans votre boîte de réception.
 
-To edit the music section:
+La section newsletter transmet une **demande d’inscription** au label par e-mail. Elle ne stocke aucune adresse et n’inscrit pas automatiquement dans une liste. Une confirmation manuelle ou l’intégration ultérieure d’un fournisseur de newsletters reste nécessaire. L’ancien endpoint public Google Sheets n’est plus utilisé.
 
-1) Edit class "Music" in index.html
-2) Change the music links to your own
-3) Substitute your picture name in class "music-hero" in style.css
+La route vérifie les champs, les tailles, le type de contenu et l’origine lorsqu’elle est fournie. Un champ invisible filtre certains robots. Pour un trafic public important, activer une protection anti-abus persistante ou les règles Vercel adaptées ; ce filtre ne constitue pas un limiteur de débit.
 
-To add featured songs:
-1) Edit your song using a DAW into a 30 second clip preview to optimize load and streaming time
-2) Place the songs in dir /music
-3) Edit array var "files" in musPlayer.js 
-4) To add a song in the array, use the following format: "Your Song Title.mp3"
+## Personnalisation
 
-To edit the news section:
+- `app/page.js` : présentation et sections de la page d’accueil.
+- `app/globals.css` : palette, typographie et mise en page responsive.
+- `lib/content.js` : morceaux, articles et photos.
+- `public/pictures/` et `public/music/` : images et fichiers audio servis par Next.js.
+- `lib/legacy-content.json` : articles et crédits d’origine conservés comme archives.
 
-1) Compress your pictures and reduce pixels to optimize load time
-2) Copy your pictures to dir /pictures/blog
-3) Substitute your picture name in classes ".a, .b, .c", ect... in style.css
-4) Substitute your picture name and blog title in class "grid" in index.html
-5) Write your blog post in the blog_(page) html pages.
+Les articles de 2018 restent identifiés comme archives. Les dates de concerts anciennes ne sont pas présentées comme des dates à venir. Le merch reste une sélection visuelle avec la mention « Bientôt disponible », sans achat fictif. Les vidéos s’ouvrent sur YouTube. Les profils sociaux et liens d’écoute du modèle étaient des liens vers sa propre page : ils ne sont pas présentés comme des profils réels dans cette version.
 
-To edit the press section:
+Les URLs HTML historiques sont redirigées vers les nouvelles routes. Les anciens fichiers HTML/CSS/JS/PHP sont conservés à la racine pour référence, mais Next.js ne les exécute pas et ne les expose pas comme pages statiques. Le code actif se trouve dans `app/`, `components/` et `lib/`.
 
-Edit class "Press" in index.html.
+## Validation
 
-To edit the video section:
+- `npm test` : 8 tests, couvrant données invalides, limites, origine, configuration manquante, envoi simulé, demande newsletter et erreurs du fournisseur.
+- `npm run build` : compilation des pages et de la fonction contact pour la production.
+- Vérifications navigateur : ordinateur et mobile, chargement des images, lecture/changement/pause audio, galerie et fermeture clavier, menu mobile, affichage de l’état non configuré du formulaire, routes d’archives et page 404.
 
-1) Navigate to the YoutTube video you want featured
-2) Copy the text after "v=" in the youtube link
-3) Paste the data-id text in class "youtube-player" in class "Video" in index.html 
+## Crédits
 
-To edit the shows section:
+Modèle original par **Matthew Waldron**, sous licence MIT. Les crédits du modèle sont conservés sur `/credits`, avec un lien « Website Credits » dans le pied de page. La licence originale est conservée dans `LICENSE`.
 
-Edit class "Shows" in index.html.
-
-To edit the pictures section:
-
-1) Compress your pictures to optimize load time
-2) Copy your pictures to dir /pictures/gallery
-3) Substitute your picture name in classes ".a, .b, .c", ect... in style.css
-4) Substitute your picture name in class "grid" in index.html
-
-To edit the contact form:
-
-1) Enter your email address in form.php
-2) Customize your response messages in form.php
-
-To edit the footer:
-1) Update the footer links to your own
-2) Replace with your artist / band name in terms.html
-
-## Customize with Skins!
-
-New black and white theme available now.
-
-1) Rename css/style_black_white.css to css/style_black_white
-
-OR
-
-1) Change the href link in the header to css/style_black_white.css for all html documents
-
-## Built With
-
-* HTML5
-* CSS3
-* jQuery/JavaScript/AJAX
-* PHP5
-
-## Contributing
-
-When contributing to this repository, you may fork and submit a pull request. Add a description of what you are doing and I'll review it.
-
-## Versioning
-
-Version 2.3.0
-
-## Authors
-
-* **Matthew Waldron** - (http://waldronmatthew.com)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
-Please abide by the Terms of Use and Website Credits pages.
-
-## Acknowledgments
-
-A HUGE thank you to all developers whom I used MIT licensed code from. They are listed on the "Website Credits" page. 
-
+La documentation originale se trouve dans [docs/legacy-template.md](docs/legacy-template.md). Avant de publier votre marque, adapter le nom, les textes d’exemple, les conditions et les informations de confidentialité à votre activité.
