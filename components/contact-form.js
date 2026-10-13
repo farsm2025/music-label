@@ -20,7 +20,7 @@ export default function ContactForm({ newsletter = false }) {
     {newsletter && <label className="newsletter-email"><span className="sr-only">Votre e-mail</span><input name="email" type="email" autoComplete="email" required maxLength={254} placeholder="Votre adresse e-mail"/></label>}
     {!newsletter && <><label>Le sujet<input name="subject" required minLength={2} maxLength={200} placeholder="Booking, collaboration, ou juste un bon morceau…"/></label><label>Votre message<textarea name="message" required minLength={5} maxLength={5000} rows={4} placeholder="On vous écoute."/></label></>}
     <div className="honeypot" aria-hidden="true"><label>Ne pas remplir<input name="website" tabIndex={-1} autoComplete="off"/></label></div>
-    <button className="button" disabled={pending} type="submit">{pending ? 'Envoi en cours…' : newsletter ? 'Demander mon inscription ↗' : 'Envoyer le message ↗'}</button>
+    <button className="button" disabled={pending} type="submit">{pending ? 'Envoi en cours…' : newsletter ? 'Demander mon inscription' : 'Envoyer le message'}</button>
     <p className="form-status" role="status" aria-live="polite">{status}</p>
     <p className="form-note">{newsletter ? 'Votre demande sera transmise au label. Vous n’êtes inscrit qu’après confirmation.' : 'Votre adresse sert uniquement à répondre à votre message.'}</p>
   </form>;

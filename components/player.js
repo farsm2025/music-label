@@ -27,7 +27,7 @@ export default function Player() {
       <button className="play-button" onClick={() => play(index)} aria-label={`${playing && selected===index ? 'Pause' : 'Lecture'} — ${track.title}`}><span aria-hidden="true">{playing && selected===index ? 'Ⅱ' : '▶'}</span></button>
     </div>)}</div>
     <div className="playback"><span>{format(time)}</span><input aria-label="Position dans le morceau" type="range" min="0" max={Number.isFinite(duration) ? duration : 0} value={time} step="0.1" disabled={!duration} onChange={e => {audio.current.currentTime=Number(e.target.value);setTime(Number(e.target.value));}}/><span>{format(duration)}</span></div>
-    <p className="player-caption">À l’écoute : {tracks[selected].title} <a href={`/music/${encodeURIComponent(tracks[selected].file)}`} download>Télécharger ↓</a></p>
+    <p className="player-caption">À l’écoute : {tracks[selected].title} <a href={`/music/${encodeURIComponent(tracks[selected].file)}`} download>Télécharger</a></p>
     {error && <p role="alert">{error}</p>}
   </div>;
 }

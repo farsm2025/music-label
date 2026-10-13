@@ -1,4 +1,4 @@
-# Music Label
+# Governance Records
 
 Site musical migré vers **Next.js 16 (App Router) et React 19**, prêt à être déployé sur Vercel. Interface sombre et éditoriale, responsive, sans jQuery ni serveur PHP.
 
@@ -35,7 +35,7 @@ Le formulaire PHP est remplacé par `POST /api/contact`, qui utilise l’API HTT
 | Variable | Usage |
 | --- | --- |
 | `RESEND_API_KEY` | Clé privée Resend, uniquement côté serveur |
-| `CONTACT_FROM` | Expéditeur sur un domaine vérifié dans Resend, par exemple `Music Label <contact@votre-domaine.fr>` |
+| `CONTACT_FROM` | Expéditeur sur un domaine vérifié dans Resend, par exemple `Governance Records <contact@votre-domaine.fr>` |
 | `CONTACT_TO` | Adresse qui reçoit les messages et les demandes d’inscription |
 
 Ne jamais utiliser de préfixe `NEXT_PUBLIC_` pour la clé, ni versionner les valeurs. Après un changement de variables dans Vercel, redéployer.
